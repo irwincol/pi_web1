@@ -1,0 +1,161 @@
+
+/*
+
+
+
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.cardSinIng{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border: 2px solid;
+    border-radius: 15px;
+    width: 40%;
+    height: 50vh;
+
+}
+
+.fieldIn {
+
+        height: 10%;
+        width: 60%;
+    
+}*/
+
+
+body{
+    
+    margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;   /* Centrado horizontal */
+  align-items: center; 
+  flex-direction: column;
+
+  
+  font-family: "Rhodium Libre", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-weight: bold;
+  background-color: #DAD2FF90;
+
+      
+}
+
+.cronoHeader{
+    position:relative;
+}
+
+
+.cardSinIng{
+
+    
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    height: 50vh;
+    border: 2px solid #493d9e;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: #F8F7FC80;
+    margin-top: 2rem;
+    color:#493d9e;
+    
+    padding-top: 2rem;
+   
+}
+
+.form-floating{
+
+    width: 80%;
+}
+
+.imgField{
+
+    height: 25px;
+    
+    
+}
+
+
+.titleCrono {
+  
+  font-family: "Vibur", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 150px;
+  color: #493d9e;
+  margin: 0px;
+  margin-bottom: 1rem;
+
+
+  
+}
+
+.clockCronoClase{
+
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+
+
+}
+
+.buttCrono{
+
+    background-color: #FFF2AF;
+    border: none;
+    color:#493d9e;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+.buttCrono:hover{
+
+    background-color:#B2A5FF ;
+    color:#FFF2AF;
+    
+}
+
+.userCrono{
+
+    position: absolute;
+    
+    left: 15.5rem;
+    
+
+    height: 5rem;
+    border:2px solid #493d9e;
+    background-color:  #DAD2FF;
+    border-radius: 50%;
+
+}
+
+
+a{
+    text-decoration: none;
+    color: #493d9e;
+}
+
+a:hover{
+
+    color:#FFF2AF;
+}
+
+/***************ESTILO CALENDARIO************************+/
+
