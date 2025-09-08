@@ -1,0 +1,188 @@
+
+
+
+
+
+
+@media (max-width: 400px) {
+    .titleCrono{font-size: 70px;
+         
+    
+    } 
+
+    .userCrono{height: 3rem;}
+    
+}
+
+
+
+
+@media (max-width: 576px)  and (min-width: 401px){ 
+    .titleCrono{font-size: 80px;
+         
+    
+    } 
+    .cardSinIng{
+        width: 20rem;
+        height: 25rem;
+
+    }
+
+    .userCrono{height: 4.5rem;}
+
+
+
+
+
+
+}
+
+@media (min-width: 577px)  { 
+    
+    .titleCrono{font-size: 150px;
+        
+    
+    } 
+
+    .cardSinIng{
+        width: 25rem;
+        height: 27rem;}
+
+
+    .userCrono{height: 5rem;}
+
+     
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.titleCrono {
+  
+  font-family: "Vibur", cursive;
+ 
+  font-style: normal;
+  color: #493d9e;
+ 
+ 
+ 
+  
+}
+
+.container_title_crono{
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.cardSinIng{
+
+    
+    display: flex;
+    flex-direction: column;
+    
+    
+    border: 2px solid #493d9e;
+    gap:10px;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: #F8F7FC80;
+   
+    color:#493d9e;
+    
+    
+   
+}
+
+
+.container_log_in{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+
+.userCrono{
+
+
+    
+    border:2px solid #493d9e;
+    background-color:  #DAD2FF;
+    border-radius: 50%;
+
+}
+
+
+.main_log_in{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    justify-content: center;
+    height: 100vh;
+
+    background-color: #DAD2FF90;
+
+     font-family: "Rhodium Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    font-weight: bold;
+
+}
+
+
+.buttCrono{
+
+    background-color: #FFF2AF;
+    border: none;
+    color:#493d9e;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.buttCrono:hover{
+
+    background-color:#B2A5FF ;
+    color:#FFF2AF;
+    
+}
+
+
+a{
+    text-decoration: none;
+    color: #493d9e;
+}
+
+a:hover{
+
+    color:#FFF2AF;
+}
+
+
+
+
+
+
+
