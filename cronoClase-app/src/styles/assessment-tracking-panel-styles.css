@@ -1,0 +1,305 @@
+ body {
+            font-family: "Rhodium Libre", serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #DAD2FF90;
+            padding-top: 80px;
+        }
+
+        .navCalendar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 2rem;
+            width: 100%;
+            background-color: #B2A5FF;
+            height: 5rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            flex-direction: row-reverse;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #F8F4FF;
+            border: 2px solid #493d9e;
+            border-radius: 20px;
+            color: #493d9e;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+      
+        }
+
+        .nav-button:hover {
+            background-color: #493d9e;
+            color: #FFF2AF;
+            transform: translateY(-2px);
+        }
+
+        h1 {
+            font-family: "Rhodium Libre", serif;
+            font-size: 60px;
+            color: #493d9e;
+            text-align: center;
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
+
+        table {
+            width: 95%;
+            border-collapse: separate;
+            border-spacing: 25px;
+            margin: 40px auto;
+        }
+
+        th, td {
+            padding: 20px;
+            border: 2px solid #493d9e;
+            border-radius: 10px;
+            background-color: #F8F7FC80;
+            border:none;
+        }
+
+        th {
+            background-color: #d7d3ee;
+            color: #000000;
+            font-family: "Rhodium Libre", serif;
+            font-weight: bold;
+            font-size: 1.5em;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .nombre-estudiante {
+            font-weight: bold;
+            color: #0c0b16;
+            margin-bottom: 10px;
+            display: block;
+            font-size: 1.2rem;
+            background-color: #FFF2AF;
+            border:none
+        }
+
+        .estado-select {
+            padding: 8px;
+            width: 100%;
+            border: 2px solid #493d9e;
+            border-radius: 8px;
+            font-family: "Rhodium Libre", serif;
+            background-color: white;
+            cursor: pointer;
+        }
+
+        .estado-select option[value="cumplido"] {
+            background-color: #CFECCF;
+            color: #1a4d1a;
+        }
+
+        .estado-select option[value="proceso"] {
+            background-color: #FFE0B2;
+            color: #8b4513;
+        }
+
+        .estado-select option[value="incumplido"] {
+            background-color: #FFB3AB;
+            color: #a10000;
+        }
+
+        .estado-select:has(option[value="cumplido"]:checked) {
+            background-color: #CFECCF;
+            color: #1a4d1a;
+        }
+
+        .estado-select:has(option[value="proceso"]:checked) {
+            background-color: #FFE0B2;
+            color: #8b4513;
+        }
+
+        .estado-select:has(option[value="incumplido"]:checked) {
+            background-color: #FFB3AB;
+            color: #a10000;
+        }
+
+        .input-fecha {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #493d9e;
+            border-radius: 8px;
+            font-family: "Rhodium Libre", serif;
+        }
+
+        .email-estudiante {
+            color: #666;
+            font-size: 0.9em;
+            display: block;
+            margin-top: 8px;
+        }
+
+        .momento-dropdown {
+            width: 100%;
+        }
+
+        .momento {
+            font-weight: bold;
+            background: #FFF2AF85;
+            color: #11101a;
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid #493d9e;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            margin: 5px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .momento:hover {
+            background-color: #B2A5FF;
+            color: white;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal:target {
+            display: block;
+        }
+
+        .modal-content {
+            background-color: #F8F7FC;
+            margin: 5% auto;
+            padding: 20px;
+            border: 2px solid #493d9e;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            background-color: #B2A5FF;
+            margin: -20px -20px 20px -20px;
+            padding: 15px 20px;
+            border-top-left-radius: 13px;
+            border-top-right-radius: 13px;
+            color: white;
+            position: sticky;
+            top: -20px;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            font-size: 24px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .close-modal:hover {
+            color: #493d9e;
+        }
+
+        .actividades {
+            padding: 20px;
+        }
+
+        .actividad {
+            padding: 15px;
+            border-bottom: 2px solid #B2A5FF;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background-color: white;
+        }
+
+        .actividad:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .actividad:hover {
+            background-color: #F8F4FF;
+        }
+
+        .actividad strong {
+            color: #16151f;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .actividad img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        .estado-titulo {
+            color: #16151f;
+            font-size: 0.9em;
+            margin: 15px 10px 8px;
+        }
+
+        .fecha-entrega {
+       color: #16151f;
+            font-size: 0.9em;
+            margin: 8px 0;
+            background-color: white;
+        }
+
+        .modal-option {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 2px solid #493d9e;
+            border-radius: 8px;
+            background-color: #F8F7FC;
+            color: #493d9e;
+            font-family: "Rhodium Libre", serif;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-option:hover {
+            background-color: #B2A5FF;
+            color: white;
+        }
+
+        .modal-body {
+            padding: 20px;
+        }
+
+        .modal-title {
+            margin: 0;
+            color: white;
+            font-size: 1.2em;
+        }
