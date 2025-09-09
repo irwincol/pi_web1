@@ -1,0 +1,471 @@
+
+body{
+
+    
+  font-family: "Rhodium Libre", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-weight: bold;
+  background-color: #DAD2FF90;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+  
+} .navCalendar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 2rem;
+            width: 100%;
+            background-color: #B2A5FF;
+            height: 5rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            flex-direction: row-reverse;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #F8F4FF;
+            border: 2px solid #493d9e;
+            border-radius: 20px;
+            color: #493d9e;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+      
+        }
+
+        .nav-button:hover {
+            background-color: #493d9e;
+            color: #FFF2AF;
+            transform: translateY(-2px);
+        }
+
+
+
+
+
+
+
+.py-5{
+    padding-top: 0px !important; 
+    padding-bottom: 0px !important;
+}
+
+.mainCalendar{
+
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap:10px;
+    padding: 2rem;
+}
+
+.mainCalendar>*{
+
+    border: 2px solid #493d9e;
+    height: 4rem;
+    width: 10rem;
+    text-align: center;
+    border-radius: 10px;
+    
+    
+
+}
+
+.diaCal{
+
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: 	#AAA6FF90;
+    border: none;
+    
+}
+
+.mesCal{
+    background-color: 	#7B61FF90;
+    border: none;
+    
+    
+}
+
+.matCal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF2AF;
+    border: none;
+}
+
+
+.tareaCal{
+
+    position: relative;
+    
+   
+}
+
+.barraCal{
+
+    position: absolute;
+    background-color: #B2A5FF50;
+    
+    width: 0rem;
+    height: 3.8rem;
+    border-radius: 11px;
+    top:0px;
+    animation: avanceSemestre 90s infinite
+    }
+
+
+.warningCrono{
+
+    background-color: red;
+    border-radius: 50%;
+    visibility: hidden;
+    animation: warningTime 10s infinite, entregadoI 100s infinite;
+    animation-delay: 0s, 15s; 
+    
+    
+}
+
+
+
+
+
+
+.warningCronoT1{
+
+    background-color: red;
+    border-radius: 50%;
+    visibility: hidden;
+    animation: warningTime 10s infinite, entregadoI 100s infinite;
+    animation-delay: 14s, 23s;
+
+
+}
+
+.warningCronoE1{
+
+    background-color: red;
+    border-radius: 50%;
+    visibility: hidden;
+    animation: warningTime 10s infinite;
+    animation-delay: 19s;
+
+
+}
+
+.warningCronoQ2{
+
+    background-color: red;
+    border-radius: 50%;
+    visibility: hidden;
+    animation: warningTime 10s infinite,  entregadoI 100s infinite;
+    animation-delay: 23s, 33.5s;
+}
+
+.warningCronoT2{
+
+    background-color: red;
+    border-radius: 50%;
+    visibility: hidden;
+    animation: warningTime 10s infinite;
+    animation-delay: 39s;
+
+
+}
+
+.deliveredQ1{
+
+    animation: entregado 5s infinite;
+    animation-delay: 15s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.deliveredQ2{
+
+        animation: entregado 5s infinite;
+        animation-delay: 33.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+}
+
+.deliveredT1{
+
+        animation: entregado 5s infinite;
+        animation-delay: 23s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+}
+
+.notDeliveredE1{
+
+        animation: NoEntregado 5s infinite;
+        animation-delay: 28s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    
+}
+
+.notDeliveredT2{
+
+        animation: NoEntregado 5s infinite;
+        animation-delay: 68s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+}
+
+
+
+
+   /**/
+
+@keyframes avanceSemestre{
+
+   
+
+  
+
+    100%{
+
+        width: 100rem;
+    }
+
+
+}
+
+@keyframes warningTime{
+
+
+    50%{
+        visibility: visible;
+        background-color: red;
+    }
+
+  
+
+
+
+}
+
+@keyframes entregado{
+
+    0%{
+        background-color:#CFECCF ;
+    }
+
+    
+    100%{
+        
+        background-color:#CFECCF ;
+
+        
+    }
+
+
+}
+
+
+@keyframes entregadoI{
+
+
+
+    
+    0%{
+        
+        background-color: green ;
+
+        
+    }
+
+    100%{
+        
+        background-color: green ;
+
+        
+    }
+
+
+}
+
+
+@keyframes NoEntregado{
+
+    0%{
+        background-color:#FFB3AB;
+    }
+
+    
+    100%{
+        
+        background-color:#FFB3AB ;
+
+        
+    }
+
+
+}
+
+/*************************************************************************/
+
+
+.rounded-circle1{
+
+    border: 1px solid #493d9e; 
+    border-radius: 50%;
+
+}
+
+
+.rounded-circle2{
+
+    border: 1px solid #493d9e; 
+    border-radius: 50%;
+
+}
+
+.rounded-circle3{
+
+    border: 1px solid #493d9e; 
+    border-radius: 50%;
+}
+
+
+.bg-primary-subtle {
+    background-color: #F8F4FF!important;
+    
+    
+}
+
+.bg-secondary-subtle {
+    
+
+     background-color: #F8F4FF!important;
+   
+}
+
+.bg-success-subtle {
+    background-color: #F8F4FF!important;
+}
+
+.border-primary-subtle {
+
+    border-color: #493d9e !important;
+}
+
+.border-secondary-subtle {
+    border-color: #493d9e!important;
+}
+
+.border-success-subtle {
+    border-color: #493d9e !important;
+}
+
+
+
+
+.FechasImpCal{
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap:3%;
+
+}
+
+
+.FechasImpCal>*{
+
+    border: 2px solid;
+    width: 20%;
+    height: 8rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+.tittleYearCal > h1{
+
+    font-family: "Vibur", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 100px ;
+  color: #493d9e;
+  margin-top: 100px;
+
+
+}
+
+.stageSemCal{
+
+    background-color: #FFD6DA;
+    width: 100%;
+    text-align: center;
+    align-self: flex-start;
+    border-radius: 15px;
+}
+
+.vacFestCal{
+
+    justify-content: center;
+    background-color: none;
+    text-align: center;
+    background-color:#BEECC6   ;
+}
+
+
+
+
+.footerCal{
+
+    background-color: #493d9e90;
+    height: 5rem;
+    width: 100%;
+    margin-top: 5rem;
+    
+    
+    
+}
