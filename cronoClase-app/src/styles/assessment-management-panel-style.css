@@ -1,0 +1,233 @@
+body {
+    font-family: "Rhodium Libre", serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #DAD2FF90;
+    padding-top: 80px;
+}
+
+.navCalendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 2rem;
+    width: 100%;
+    background-color: #B2A5FF;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row-reverse;
+    z-index: 1000;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #F8F4FF;
+    border: 2px solid #493d9e;
+    border-radius: 20px;
+    color: #493d9e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.nav-button:hover {
+    background-color: #493d9e;
+    color: #FFF2AF;
+}
+
+h1 {
+    text-align: center;
+    color: #493d9e;
+    margin-bottom: 2rem;
+    margin-top: 50px;
+}
+
+.momentos-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.momento-card {
+    background-color: #F8F4FF;
+    border: 2px solid #493d9e;
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    width: 400px;
+    height: 250px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.momento-card h2 {
+    color: #493d9e;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.btn-cargar {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FFF2AF;
+    color: #493d9e;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.btn-cargar:hover {
+    background-color: #493d9e;
+    color: #FFF2AF;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1001;
+}
+
+.modal:target {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #F8F4FF;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    border: 2px solid #493d9e;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #B2A5FF;
+}
+
+.close-modal {
+    color: #493d9e;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.close-modal:hover {
+    color: #B2A5FF;
+}
+
+.actividades {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.actividad-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #B2A5FF;
+}
+
+.actividad-form h4 {
+    color: #493d9e;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #B2A5FF;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #493d9e;
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #B2A5FF;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #493d9e;
+    box-shadow: 0 0 0 2px rgba(73, 61, 158, 0.2);
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.btn-guardar {
+    padding: 10px 20px;
+    background-color: #493d9e;
+    color: #FFF2AF;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-guardar:hover {
+    background-color: #B2A5FF;
+    color: #493d9e;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .actividad-form {
+        padding: 15px;
+    }
+}
