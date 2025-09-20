@@ -1,0 +1,225 @@
+body {
+    font-family: "Rhodium Libre", serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #DAD2FF90;
+    padding-top: 80px;
+}
+
+.navCalendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 2rem;
+    width: 100%;
+    background-color: #B2A5FF;
+    height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: row-reverse;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #F8F4FF;
+    border: 2px solid #493d9e;
+    border-radius: 20px;
+    color: #493d9e;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.nav-button:hover {
+    background-color: #493d9e;
+    color: #FFF2AF;
+}
+
+.profesores-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 20px;
+}
+
+.profesor-card {
+    background-color: #F8F4FF;
+    border: 2px solid #493d9e;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profesor-card h3 {
+    color: #493d9e;
+    margin-top: 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #B2A5FF;
+    padding-bottom: 10px;
+}
+
+.profesor-card p {
+    margin: 10px 0;
+    color: #333;
+}
+
+.profesor-card .label {
+    font-weight: bold;
+    color: #493d9e;
+}
+
+.horario {
+    background-color: #e2aae9;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: #493d9e;
+    margin-bottom: 2rem;
+}
+
+.momentos-container {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.momento-dropdown {
+    text-align: center;
+}
+
+.momento {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #FFF2AF;
+    color: #493d9e;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.momento:hover {
+    background-color: #493d9e;
+    color: #FFF2AF;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #F8F4FF;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    border: 2px solid #493d9e;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #B2A5FF;
+}
+
+.close-modal {
+    color: #493d9e;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.close-modal:hover {
+    color: #B2A5FF;
+}
+
+.actividades {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.actividad {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #B2A5FF;
+}
+
+.actividad strong {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #493d9e;
+}
+
+.actividad img {
+    width: 24px;
+    height: 24px;
+}
+
+.estado-info {
+    margin-top: 0.5rem;
+}
+
+.estado {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.estado.pendiente {
+    background-color: #FFF2AF;
+    color: #493d9e;
+}
+
+.estado.completado {
+    background-color: #90EE90;
+    color: #006400;
+}
+
+.estado.proceso {
+    background-color: #B2A5FF;
+    color: #493d9e;
+}

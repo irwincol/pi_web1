@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Profesores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rhodium+Libre&family=Vibur&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/styles/estilosVistaEstudiantes.css" />
+</head>
+
+<body>
+  <nav class="navCalendar">
+    <div class="nav-buttons">
+      <a href="#" class="nav-button">
+        <img src="../cicloDeVida/img/admin.png" alt="Usuario" />
+        Usuario
+      </a>
+      <a href="../index.html" class="nav-button">
+        <img src="../cicloDeVida/img/home-automation.png" alt="Inicio" />
+        Inicio
+      </a>
+    </div>
+    <div class="nav-buttons">
+      <a href="./calendarStudent.html" class="nav-button">
+        <img src="../cicloDeVida/img/calendario.png" alt="Calendario" />
+        Calendario
+      </a>
+    </div>
+  </nav>
+
+  <h1>Mis Profesores del Semestre</h1>
+
+  <div class="profesores-container">
+    <div class="profesor-card">
+      <h3>Carlos Rodríguez</h3>
+      <p><span class="label">Correo:</span> carlos.rodriguez@cesde.edu.co</p>
+      <p><span class="label">Materia:</span> Programación Web</p>
+      <div class="horario">
+        <p><span class="label">Horario:</span></p>
+        <p>Lunes y Miércoles</p>
+        <p>8:00 AM - 10:00 AM</p>
+      </div>
+      <div class="momentos-container">
+        <div class="momento-dropdown">
+          
+          <button onclick="obtenerUsuarios()"><a href="#modal-carlos-m1" class="momento">Momento 1</a></button>
+        </div>
+        <div id="modal-carlos-m1" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Momento 1 - Programación Web</h3>
+              <a href="#" class="close-modal">&times;</a>
+            </div>
+            <div class="actividades" id="actividadAPI">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+
+        <div class="momento-dropdown">
+          <a href="#modal-carlos-m2" class="momento">Momento 2</a>
+        </div>
+        <div id="modal-carlos-m2" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Momento 2 - Programación Web</h3>
+              <a href="#" class="close-modal">&times;</a>
+            </div>
+            <div class="actividades">
+              <div class="actividad">
+                <strong>Actividad 1| Quiz <img src="img/quizas.png" alt=""></strong>
+                <p>Fecha: 13 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 2| Taller <img src="img/capacitacion.png" alt=""></strong>
+                <p>Fecha: 20 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 3| Proyecto Final <img src="img/adjunto.png" alt=""></strong>
+                <p>Fecha: 27 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="momento-dropdown">
+          <a href="#modal-carlos-m3" class="momento">Momento 3</a>
+        </div>
+        <div id="modal-carlos-m3" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Momento 3 - Programación Web</h3>
+              <a href="#" class="close-modal">&times;</a>
+            </div>
+            <div class="actividades">
+              <div class="actividad">
+                <strong>Actividad 1| Quiz Final <img src="img/quizas.png" alt=""></strong>
+                <p>Fecha: 10 de agosto 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 2| Presentación <img src="img/capacitacion.png" alt=""></strong>
+                <p>Fecha: 17 de agosto 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 3| Proyecto Final <img src="img/adjunto.png" alt=""></strong>
+                <p>Fecha: 24 de agosto 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profesor-card">
+      <h3>Ana María García</h3>
+      <p><span class="label">Correo:</span> ana.garcia@cesde.edu.co</p>
+      <p><span class="label">Materia:</span> Bases de Datos</p>
+      <div class="horario">
+        <p><span class="label">Horario:</span></p>
+        <p>Martes y Jueves</p>
+        <p>10:00 AM - 12:00 PM</p>
+      </div>
+      <div class="momentos-container">
+        <div class="momento-dropdown">
+          <a href="#modal-ana-m1" class="momento">Momento 1</a>
+        </div>
+        <div id="modal-ana-m1" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Momento 1 - Bases de Datos</h3>
+              <a href="#" class="close-modal">&times;</a>
+            </div>
+            <div class="actividades">
+              <div class="actividad">
+                <strong>Actividad 1| Quiz <img src="img/quizas.png" alt=""></strong>
+                <p>Fecha: 16 de junio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 2| Exposición <img src="img/capacitacion.png" alt=""></strong>
+                <p>Fecha: 23 de junio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 3| Proyecto <img src="img/adjunto.png" alt=""></strong>
+                <p>Fecha: 30 de junio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="momento-dropdown">
+          <a href="#modal-ana-m2" class="momento">Momento 2</a>
+        </div>
+        <div id="modal-ana-m2" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Momento 2 - Bases de Datos</h3>
+              <a href="#" class="close-modal">&times;</a>
+            </div>
+            <div class="actividades">
+              <div class="actividad">
+                <strong>Actividad 1| Quiz <img src="img/quizas.png" alt=""></strong>
+                <p>Fecha: 14 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 2| Taller <img src="img/capacitacion.png" alt=""></strong>
+                <p>Fecha: 21 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 3| Proyecto Final <img src="img/adjunto.png" alt=""></strong>
+                <p>Fecha: 28 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="momento-dropdown">
+          <a href="#modal-ana-m3" class="momento">Momento 3</a>
+        </div>
+        <div id="modal-ana-m3" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Momento 3 - Bases de Datos</h3>
+              <a href="#" class="close-modal">&times;</a>
+            </div>
+            <div class="actividades">
+              <div class="actividad">
+                <strong>Actividad 1| Quiz Final <img src="img/quizas.png" alt=""></strong>
+                <p>Fecha: 11 de agosto 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 2| Presentación <img src="img/capacitacion.png" alt=""></strong>
+                <p>Fecha: 18 de agosto 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 3| Proyecto Final <img src="img/adjunto.png" alt=""></strong>
+                <p>Fecha: 25 de agosto 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profesor-card">
+      <h3>Juan Pablo Méndez</h3>
+      <p><span class="label">Correo:</span> juan.mendez@cesde.edu.co</p>
+      <p><span class="label">Materia:</span> Desarrollo de Software</p>
+      <div class="horario">
+        <p><span class="label">Horario:</span></p>
+        <p>Viernes</p>
+        <p>2:00 PM - 6:00 PM</p>
+      </div>
+      <div class="momentos-container">
+        <div class="momento-dropdown">
+          <a href="#modal-juan-m1" class="momento">Momento 1</a>
+        </div>
+        <div id="modal-juan-m1" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Momento 1 - Desarrollo de Software</h3>
+              <a href="#" class="close-modal">&times;</a>
+            </div>
+            <div class="actividades">
+              <div class="actividad">
+                <strong>Actividad 1| Quiz <img src="img/quizas.png" alt=""></strong>
+                <p>Fecha: 17 de junio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 2| Exposición <img src="img/capacitacion.png" alt=""></strong>
+                <p>Fecha: 24 de junio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 3| Proyecto <img src="img/adjunto.png" alt=""></strong>
+                <p>Fecha: 1 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="momento-dropdown">
+          <a href="#modal-juan-m2" class="momento">Momento 2</a>
+        </div>
+        <div id="modal-juan-m2" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Momento 2 - Desarrollo de Software</h3>
+              <a href="#" class="close-modal">&times;</a>
+            </div>
+            <div class="actividades">
+              <div class="actividad">
+                <strong>Actividad 1| Quiz <img src="img/quizas.png" alt=""></strong>
+                <p>Fecha: 14 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 2| Taller <img src="img/capacitacion.png" alt=""></strong>
+                <p>Fecha: 21 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 3| Proyecto Final <img src="img/adjunto.png" alt=""></strong>
+                <p>Fecha: 28 de julio 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="momento-dropdown">
+          <a href="#modal-juan-m3" class="momento">Momento 3</a>
+        </div>
+        <div id="modal-juan-m3" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3>Momento 3 - Desarrollo de Software</h3>
+              <a href="#" class="close-modal">&times;</a>
+            </div>
+            <div class="actividades">
+              <div class="actividad">
+                <strong>Actividad 1| Quiz Final <img src="img/quizas.png" alt=""></strong>
+                <p>Fecha: 10 de agosto 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 2| Presentación <img src="img/capacitacion.png" alt=""></strong>
+                <p>Fecha: 17 de agosto 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+              <div class="actividad">
+                <strong>Actividad 3| Proyecto Final <img src="img/adjunto.png" alt=""></strong>
+                <p>Fecha: 24 de agosto 2025</p>
+                <div class="estado-info">
+                  <span class="estado pendiente">Pendiente</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../src/scripts/MostrarTareas.js"></script>
+
+
+  
+</body>
+
+</html>

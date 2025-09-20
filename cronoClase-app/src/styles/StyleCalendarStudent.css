@@ -1,0 +1,320 @@
+
+@media (max-width: 575px){
+      body { font-size: 0.9rem ; }
+  .mainCalendar>*{height: 4rem;}
+  .mainCalendar{gap: 0.5rem;}
+  .tittleYearCal>h1{font-size: 6rem ;}
+  .navCalendar{}
+
+}
+
+@media (min-width: 576px) {
+  body { font-size: 1rem ; }
+  .mainCalendar>*{height: 2rem;}
+  .mainCalendar{gap: 2px;}
+  .tittleYearCal>h1{font-size: 10rem;}
+  
+}
+
+/* Medium devices (≥768px) */
+@media (min-width: 768px) {
+  body { font-size: 1.5rem;  }
+  .mainCalendar>*{height: 6rem;}
+  .mainCalendar{gap: 1rem;}
+  .tittleYearCal>h1{font-size: 10rem;}
+}
+
+/* Large devices (≥992px) */
+@media (min-width: 992px) {
+  body { font-size: 1.2rem ;  }
+  .mainCalendar>*{height: 5rem;}
+  .mainCalendar{gap: 1rem;}
+  .tittleYearCal>h1{font-size: 5rem;}
+  .FechasImpCal>*{
+    font-size: 0.5rem;
+  }
+  .stageSemCal{
+    height: fit-content;
+
+  }
+  
+}
+
+/* Extra large (≥1200px) */
+@media (min-width: 1200px) {
+  body { font-size: 1.5rem ;  }
+  .mainCalendar>*{height: 6rem;}
+  .mainCalendar{gap: 2px;}
+  .tittleYearCal>h1{font-size: 6.5rem;
+    }
+}
+
+/* Extra extra large (≥1400px) */
+@media (min-width: 1400px) {
+  body { font-size: 1rem ; }
+  .mainCalendar>*{height: 4rem;}
+  .mainCalendar{gap: 2px;}
+  .tittleYearCal>h1{font-size: 9rem;}
+}
+
+
+
+
+
+
+
+body{
+
+    
+  font-family: "Rhodium Libre", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  font-weight: bold;
+  background-color: #DAD2FF90;
+
+    height: 100vh;              /* que el body ocupe toda la pantalla */
+  display: flex;
+  justify-content: center;    /* centra en horizontal */
+  align-items: center;  
+  flex-direction: column;
+ 
+
+
+  
+  
+  
+  
+}
+
+
+
+
+
+
+
+
+.mainCalendar{
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+
+    font-family: "Rhodium Libre", serif;
+    width: 100vw;
+   
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+ 
+    
+    
+    
+}
+
+.mainCalendar>*{
+
+    border: 1px solid #493d9e;
+    
+    
+    text-align: center;
+    border-radius: 10px;
+    
+
+    
+    
+
+}
+
+.diaCal{
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: 	#AAA6FF90;
+    border: none;
+    
+    
+}
+
+.mesCal{
+    background-color: 	#7B61FF90;
+    border: none;
+    
+    
+}
+
+
+.tittleYearCal > h1{
+
+font-family: "Vibur", cursive;
+  
+  font-style: normal;
+
+  
+  color: #493d9e;
+  margin: 0px;
+  margin-top: 50px;
+ 
+ 
+
+
+}
+
+
+.tittleYearCal{
+
+    display: flex;
+    margin: 0px;
+    width: 100%;
+    justify-content: center;
+    
+  
+  
+   
+
+
+
+}
+
+.tittleWeek{
+    font-family: "Rhodium Libre", serif;
+    display: flex;
+    margin: 0px;
+    width: 100%;
+    justify-content: center;
+    height: fit-content;
+    background-color: bisque;
+    margin-bottom: 10px;
+    font-weight: lighter;
+    
+    
+    
+
+
+
+}
+
+.tittleWeek>h1{
+
+    margin:0px;
+    
+}
+
+
+
+.FechasImpCal{
+
+    display: flex;
+    
+    
+    gap:3%;
+    margin-top: 20px;
+   
+  
+   
+    width: 100%;
+
+}
+
+.stageSemCal{
+
+    background-color: #FFD6DA;
+    width: 100%;
+    text-align: center;
+    align-self: flex-start;
+    border-radius: 15px;
+    
+}
+
+.vacFestCal{
+
+    justify-content: center;
+    background-color: none;
+    text-align: center;
+    background-color:#BEECC6   ;
+    border-radius: 15px;
+}
+
+
+.FechasImpCal>*{
+
+    border: 1.2px solid;
+    width: 100%;
+    
+
+    
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+
+.matCal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF2AF;
+    border: none;
+    
+}
+
+
+
+.navCalendar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 2rem;
+            width: 100%;
+            background-color: #B2A5FF;
+            height: 5rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            flex-direction: row-reverse;
+        }
+
+
+ .nav-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            background-color: #F8F4FF;
+            border: 2px solid #493d9e;
+            border-radius: 20px;
+            color: #493d9e;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .nav-button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+      
+        }
+
+        .nav-button:hover {
+            background-color: #493d9e;
+            color: #FFF2AF;
+            transform: translateY(-2px);
+        }
+
+
+
+
+
+
+
+
