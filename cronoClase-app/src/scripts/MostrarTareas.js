@@ -3,8 +3,6 @@ const contenido = document.getElementById("actividadAPI");
 async function obtenerUsuarios() {
   const contenido = document.getElementById("actividadAPI");
 
-  
-
   fetch("http://localhost:3001/tareas")
     .then((response) => response.json())
 
