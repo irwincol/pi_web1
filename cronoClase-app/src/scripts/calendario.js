@@ -47,21 +47,24 @@ for (let i = 0; i < 5; i++) {
 const strDiaSemana = ["Lu", "Ma","Mi","Ju","Vi"]
 let fechaCal = document.querySelectorAll("#fechaCal")
 
+//aqui se escribe en el calendario los dias de acuerdo con el presente
 fechaCal.forEach((diaEle, i) => {diaEle.innerHTML += `${diasSemana[i]} <br> ${strDiaSemana[i]} `})
 
 
-
+/***************carga de actividades en el calendario*****************/
 const lista = document.querySelectorAll("#mat1");
      
 
 
-
+//se toman las fechas del calendario y se crea un array
 const fechasArray = Array.from(fechaCal)
+
+//se toman las fechas del calendario 
 const fechasSemana = fechasArray.map(itemFecha => itemFecha.textContent);
 
 
 
-
+//se cargan las actividades desde la API
 
 fetch("http://localhost:3001/tareas")
     .then((response) => response.json())
@@ -71,17 +74,23 @@ fetch("http://localhost:3001/tareas")
 
       
       data.forEach((tarea) => {
-        //contenido.innerHTML += `<p>${tarea.titulo} - entrega: ${tarea.fecha_entrega}</p>`
 
-        //console.log(tarea.fecha_entrega)
+        //se toman las fehcas de las tareas obtenidas desde mockoon
+        
         const fechaTexto = tarea.fecha_entrega;
         const [año, mes, dia] = fechaTexto.split("-");
         const fechaProcess = new Date(año, mes-1, dia);
         let dayCalendarIndex = fechaProcess.getDay()-1
+
+        //se verifica que la fehca de las actividades cargadas exista en la semana
+        //que se está presentando en el calendario
             
         for( i of fechasSemana)  {
 
               if(i.includes(dia)){
+
+                //si la fecha si esta en la semana, entonces se carga el nombre
+                //de la actividad en el lugar correspondiente
                     lista[dayCalendarIndex].textContent =tarea.titulo
                     
               }
