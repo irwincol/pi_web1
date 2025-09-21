@@ -146,7 +146,7 @@
       </div>
       <div class="momentos-container">
         <div class="momento-dropdown">
-          <a href="#modal-ana-m1" class="momento">Momento 1</a>
+          <button onclick="obtenerUsuarios()"><a href="#modal-ana-m1" class="momento">Momento 1</a></button>
         </div>
         <div id="modal-ana-m1" class="modal">
           <div class="modal-content">
@@ -154,29 +154,7 @@
               <h3>Momento 1 - Bases de Datos</h3>
               <a href="#" class="close-modal">&times;</a>
             </div>
-            <div class="actividades">
-              <div class="actividad">
-                <strong>Actividad 1| Quiz <img src="img/quizas.png" alt=""></strong>
-                <p>Fecha: 16 de junio 2025</p>
-                <div class="estado-info">
-                  <span class="estado pendiente">Pendiente</span>
-                </div>
-              </div>
-              <div class="actividad">
-                <strong>Actividad 2| Exposición <img src="img/capacitacion.png" alt=""></strong>
-                <p>Fecha: 23 de junio 2025</p>
-                <div class="estado-info">
-                  <span class="estado pendiente">Pendiente</span>
-                </div>
-              </div>
-              <div class="actividad">
-                <strong>Actividad 3| Proyecto <img src="img/adjunto.png" alt=""></strong>
-                <p>Fecha: 30 de junio 2025</p>
-                <div class="estado-info">
-                  <span class="estado pendiente">Pendiente</span>
-                </div>
-              </div>
-            </div>
+            <div class="actividades" id="actividadAPI"></div>
           </div>
         </div>
 
