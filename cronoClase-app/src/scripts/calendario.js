@@ -15,7 +15,7 @@ const yearCal = hoy.getFullYear() ;// +1 porque enero = 0
 let meses = ["Ene", "Feb", "Mar", "Abr","May", "Jun", "Jul", "Ags", "Sep", "Oct", "Nov", "Dec"]
 
 //se toma el inidice del mes actual y se busca en la lista de meses
-//se escrbe ne la casilla correspondiente
+//se escribe en la casilla correspondiente
 mes.textContent = meses[mesCal]
 
 //se toma el año y se escribe en la casilla cosrrespondiente
@@ -82,7 +82,7 @@ fetch("http://localhost:3001/tareas")
         const fechaProcess = new Date(año, mes-1, dia);
         let dayCalendarIndex = fechaProcess.getDay()-1
 
-        //se verifica que la fehca de las actividades cargadas exista en la semana
+        //se verifica que la fecha de las actividades cargadas exista en la semana
         //que se está presentando en el calendario
             
         for( i of fechasSemana)  {
