@@ -5,6 +5,32 @@
             background-color: #DAD2FF90;
             padding-top: 80px;
         }
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        padding-top: 70px;
+    }
+    .navCalendar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 5px;
+    }
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        align-items: stretch;
+    }
+    .nav-button {
+        font-size: 1rem;
+        padding: 10px;
+        justify-content: center;
+    }
+    h1 {
+        font-size: 2rem;
+        margin-top: 80px;
+    }
+}
 
         .navCalendar {
             display: flex;
