@@ -1,4 +1,4 @@
-async function obtenerUsuarios(contenedorId) {
+async function obtenerTareasMat1(contenedorId) {
   const contenido = document.getElementById(contenedorId);
 
  fetch("http://localhost:3001/tareas")
@@ -18,7 +18,7 @@ async function obtenerUsuarios(contenedorId) {
     });
 }
 
-    async function obtenerUsuarios(contenedorId) {
+    async function obtenerTareasMat2(contenedorId) {
   const contenido = document.getElementById(contenedorId);
 
   fetch("http://localhost:3001/mat2")
