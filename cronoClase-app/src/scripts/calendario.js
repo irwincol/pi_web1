@@ -53,7 +53,7 @@ fechaCal.forEach((diaEle, i) => {diaEle.innerHTML += `${diasSemana[i]} <br> ${st
 
 /***************carga de actividades en el calendario*****************/
 const lista = document.querySelectorAll("#mat1");
-     
+const listaMat2 = document.querySelectorAll("#mat2");     
 
 
 //se toman las fechas del calendario y se crea un array
@@ -68,11 +68,7 @@ const fechasSemana = fechasArray.map(itemFecha => itemFecha.textContent);
 
 fetch("http://localhost:3001/tareas")
     .then((response) => response.json())
-
     .then((data) => {
-      
-
-      
       data.forEach((tarea) => {
 
         //se toman las fehcas de las tareas obtenidas desde mockoon
@@ -95,15 +91,32 @@ fetch("http://localhost:3001/tareas")
                     
               }
         }
-            
-            
-            
-
            // console.log([año, mes, dia])
-            
-        
+      });
+    });
 
+    fetch("http://localhost:3001/mat2")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((tarea) => {
+
+        //se toman las fehcas de las tareas obtenidas desde mockoon
         
+        const fechaTexto = tarea.fecha_entrega;
+        const [año, mes, dia] = fechaTexto.split("-");
+        const fechaProcess = new Date(año, mes-1, dia);
+        let dayCalendarIndex = fechaProcess.getDay()-1
+
+        //se verifica que la fehca de las actividades cargadas exista en la semana
+        //que se está presentando en el calendario
+            
+        for( i of fechasSemana)  {
+          if(i.includes(dia)){
+            // Ahora se escribe en Mat 2
+            listaMat2[dayCalendarIndex].textContent = tarea.titulo;
+          }
+        }
+           // console.log([año, mes, dia])
       });
     });
 
