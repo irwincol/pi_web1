@@ -121,3 +121,30 @@ fetch("http://localhost:3001/tareas")
     });
 
 
+
+    fetch("http://localhost:3001/mat3")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((tarea) => {
+
+        //se toman las fehcas de las tareas obtenidas desde mockoon
+        
+        const fechaTexto = tarea.fecha_entrega;
+        const [año, mes, dia] = fechaTexto.split("-");
+        const fechaProcess = new Date(año, mes-1, dia);
+        let dayCalendarIndex = fechaProcess.getDay()-1
+
+        //se verifica que la fehca de las actividades cargadas exista en la semana
+        //que se está presentando en el calendario
+            
+        for( i of fechasSemana)  {
+          if(i.includes(dia)){
+            // Ahora se escribe en Mat 2
+            listaMat3[dayCalendarIndex].textContent = tarea.titulo;
+          }
+        }
+           // console.log([año, mes, dia])
+      });
+    });
+
+
