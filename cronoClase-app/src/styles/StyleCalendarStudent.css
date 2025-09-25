@@ -1,10 +1,27 @@
+/* Efecto llamativo para el año 2025 */
+.year-glow-start {
+  opacity: 0;
+  transform: scale(0.7);
+}
+.year-glow-animate {
+  opacity: 1;
+  transform: scale(1.2);
+  color: #111;
+  text-shadow: 0 0 20px #ffd700, 0 0 40px #ffd700, 0 0 60px #ffd700;
+  transition: opacity 0.8s, transform 0.8s, text-shadow 0.8s;
+  animation: glowPulse 1.2s ease-in-out;
+}
+@keyframes glowPulse {
+  0% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700; }
+  50% { text-shadow: 0 0 40px #ffd700, 0 0 80px #ffd700; }
+  100% { text-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700; }
+}
 
 @media (max-width: 575px){
       body { font-size: 0.9rem ; }
   .mainCalendar>*{height: 4rem;}
   .mainCalendar{gap: 0.5rem;}
   .tittleYearCal>h1{font-size: 6rem ;}
-  .navCalendar{}
 
 }
 
@@ -30,8 +47,15 @@
   .mainCalendar>*{height: 5rem;}
   .mainCalendar{gap: 1rem;}
   .tittleYearCal>h1{font-size: 5rem;}
-  .FechasImpCal>*{
-    font-size: 0.5rem;
+  .FechasImpCal h2, .FechasImpCal h3, .vacFestCal h2 {
+  font-size: 1.1rem;
+    font-weight: bold;
+  color: #111;
+    letter-spacing: 1px;
+  }
+  .FechasImpCal h3 {
+  font-size: 1.1rem;
+  color: #111;
   }
   .stageSemCal{
     height: fit-content;
@@ -94,20 +118,16 @@ body{
 
 
 
-.mainCalendar{
-
+.mainCalendar {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    
-
     font-family: "Rhodium Libre", serif;
-    width: 100vw;
-   
+    width: 98vw;
+    max-width: 1150px;
+    margin: 0.8rem auto;
     grid-template-rows: 1fr 1fr 1fr 1fr;
- 
-    
-    
-    
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
 }
 
 .mainCalendar>*{
@@ -131,14 +151,14 @@ body{
     justify-content: center;
     align-items: center;
     background-color: 	#AAA6FF90;
-    border: none;
+    border: 1px solid #111;
     
     
 }
 
 .mesCal{
     background-color: 	#7B61FF90;
-    border: none;
+    border: 1px solid #111;
     
     
 }
@@ -223,22 +243,22 @@ font-family: "Vibur", cursive;
     text-align: center;
     align-self: flex-start;
     border-radius: 15px;
+    border: 1px solid #111;
     
 }
 
 .vacFestCal{
 
     justify-content: center;
-    background-color: none;
-    text-align: center;
-    background-color:#BEECC6   ;
+    background-color: #BEECC6;
     border-radius: 15px;
+    border: 1px solid #111;
 }
 
 
 .FechasImpCal>*{
 
-    border: 1.2px solid;
+    border: 1.2px solid #111;
     width: 100%;
     
 
@@ -258,7 +278,7 @@ font-family: "Vibur", cursive;
     justify-content: center;
     align-items: center;
     background-color: #FFF2AF;
-    border: none;
+    border: 1px solid #111;
     
 }
 
