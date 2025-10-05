@@ -15,34 +15,35 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../src/styles/estilosPanelEvaluacion.css" />
+  <link rel="stylesheet" href="../src/styles/nav-active.css" />
+  <link rel="stylesheet" href="../src/styles/responsive.css" />
   </head>
   <body>
     <nav class="navCalendar">
-      <div class="nav-buttons">
-  <a href="./assessment-management-panel.html" class="nav-button">Panel de Carga</a>
-          <img src="../src/assets/img/acortar.png" alt="Inicio" />
-          Cargar actividades
-
-        </a>
-  <a href="../../index.html" class="nav-button">Inicio</a>
-          <img src="../src/assets/img/admin.png" alt="Usuario" />
-          Usuario
-        </a>
-<<<<<<< HEAD:cronoClase-app/public/materias_new.html
-        <a href="../index.html" class="nav-button">
-          <img src="../cicloDeVida/img/home-automation.png" alt="Inicio" />
-          Inicio
-        </a>
-      </div>
-      <div class="nav-buttons">
+      <div class="nav-buttons" style="width:100%; justify-content:center; display:flex; gap:2rem;">
         <a href="./calendarStudent.html" class="nav-button">
-          <img src="../cicloDeVida/img/calendario.png" alt="Calendario" />
+          <img src="../src/assets/img/calendario.png" alt="Calendario" />
           Calendario
         </a>
-=======
->>>>>>> 89540202684db1c989fce72df611ecbe53880588:cronoClase-app/public/assessment-tracking-panel.html
+        <a href="./panelCargaActividades.html" class="nav-button">
+          <img src="../src/assets/img/acortar.png" alt="Panel de Carga" />
+          Panel de Carga
+        </a>
+        <a href="./vistaEstudiantes.html" class="nav-button">
+          <img src="../src/assets/img/graduado.png" alt="Vista de Estudiantes" />
+          Vista de Estudiantes
+        </a>
+        <a href="./assessment-tracking-panel.html" class="nav-button">
+          <img src="../src/assets/img/journal-code.svg" alt="Panel Evaluación" />
+          Panel de Evaluación
+        </a>
+        <a href="../../index.html" class="nav-button">
+          <img src="../src/assets/img/lock-fill.svg" alt="Cerrar sesión" />
+          Cerrar sesión
+        </a>
       </div>
-    </nav>
+  </nav>
+  <script src="../src/scripts/nav-active.js"></script>
 
     <h1>Panel de Evaluación - Profesor</h1>
     <table>
@@ -73,10 +74,8 @@
                 </div>
                 <div class="actividades">
                   <div class="actividad">
-                    <strong
-                      >Actividad 1| Quiz
-                      <img src="../src/assets/img/quizas.png" alt=""
-                    /></strong>
+                    <strong>Actividad 1 | Quiz</strong>
+                    <img class="actividad-icon" src="../src/assets/img/quizas.png" alt="Icono Quiz" />
                     <input type="date" class="fecha-entrega" />
                     <div class="estado-titulo">Estado:</div>
                     <select class="estado-select">
@@ -89,10 +88,8 @@
                     </select>
                   </div>
                   <div class="actividad">
-                    <strong
-                      >Actividad 2| Exposición
-                      <img src="../src/assets/img/capacitacion.png" alt=""
-                    /></strong>
+                    <strong>Actividad 2 | Exposición</strong>
+                    <img class="actividad-icon" src="../src/assets/img/capacitacion.png" alt="Icono Exposición" />
                     <input type="date" class="fecha-entrega" />
                     <div class="estado-titulo">Estado:</div>
                     <select class="estado-select">
@@ -105,10 +102,8 @@
                     </select>
                   </div>
                   <div class="actividad">
-                    <strong
-                      >Actividad 3| Proyecto
-                      <img src="../src/assets/img/adjunto.png" alt=""
-                    /></strong>
+                    <strong>Actividad 3 | Proyecto</strong>
+                    <img class="actividad-icon" src="../src/assets/img/adjunto.png" alt="Icono Adjunto" />
                     <input type="date" class="fecha-entrega" />
                     <div class="estado-titulo">Estado:</div>
                     <select class="estado-select">

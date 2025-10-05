@@ -329,3 +329,10 @@
             color: white;
             font-size: 1.2em;
         }
+        /* Reglas añadidas desde assessment-tracking-panel.html */
+        .navCalendar img { max-height:28px; max-width:48px; object-fit:contain; display:inline-block; }
+        .actividades img, .actividad img { max-height:22px; max-width:32px; object-fit:contain; vertical-align:middle; margin-left:6px; }
+        .actividad-icon { max-height:22px; max-width:32px; margin-left:6px; vertical-align:middle; }
+        /* Ajustes de tabla para mejor legibilidad */
+        table { width:100%; border-collapse:collapse; }
+        th, td { padding:8px; border:1px solid #ddd; }
