@@ -1,0 +1,21 @@
+.nav-button.active {
+	background-color: #493d9e;
+	color: #fff;
+	border-color: #332;
+	transform: translateY(-2px);
+}
+
+/* Keep icon images in their original colors; do not invert them when the nav item is active */
+.nav-button.active img {
+	filter: none;
+	mix-blend-mode: normal;
+	opacity: 1;
+}
+
+/* Consistent sizing and spacing for nav icons */
+.nav-button img {
+	height: 22px;
+	width: auto;
+	vertical-align: middle;
+	margin-right: 8px;
+}

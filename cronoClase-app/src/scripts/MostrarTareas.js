@@ -3,7 +3,7 @@ const contenido = document.getElementById("actividadAPI");
 async function obtenerUsuarios() {
   const contenido = document.getElementById("actividadAPI");
 
-  fetch("http://localhost:3001/tareas")
+  fetch("https://68df2db0898434f41356f070.mockapi.io/tarea")
     .then((response) => response.json())
 
     .then((data) => {

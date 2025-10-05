@@ -22,6 +22,8 @@
 
 
     <link rel="stylesheet" href="../src/styles/StyleCalendarStudent.css">
+    <link rel="stylesheet" href="../src/styles/nav-active.css" />
+    <link rel="stylesheet" href="../src/styles/responsive.css" />
 
 
 </head>
@@ -30,20 +32,29 @@
 
         <nav class="navCalendar">
                     <div class="nav-buttons" style="width:100%; justify-content:center; display:flex; gap:2rem;">
+                        <a href="./calendarStudent.html" class="nav-button">
+                            <img src="../src/assets/img/calendario.png" alt="Calendario" />
+                            Calendario
+                        </a>
                         <a href="./panelCargaActividades.html" class="nav-button">
-                            <img src="../src/assets/img/profesor.png" alt="profesor" />
+                            <img src="../src/assets/img/acortar.png" alt="Panel de Carga" />
                             Panel de Carga
                         </a>
                         <a href="./vistaEstudiantes.html" class="nav-button">
-                            <img src="../src/assets/img/graduado.png" alt="Estudiante" />
+                            <img src="../src/assets/img/graduado.png" alt="Vista de Estudiantes" />
                             Vista de Estudiantes
+                        </a>
+                        <a href="./assessment-tracking-panel.html" class="nav-button">
+                            <img src="../src/assets/img/journal-code.svg" alt="Panel Evaluación" />
+                            Panel de Evaluación
                         </a>
                                 <a href="../../index.html" class="nav-button">
                                     <img src="../src/assets/img/lock-fill.svg" alt="Cerrar sesión" />
                                     Cerrar sesión
                                 </a>
                     </div>
-        </nav>
+    </nav>
+    <script src="../src/scripts/nav-active.js"></script>
 
 
 
@@ -227,39 +238,24 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
-                        <script src="../src/scripts/calendario.js"></script>
-                        <script>
-                        window.addEventListener('DOMContentLoaded', function() {
-                            var yearEl = document.getElementById('yearCal');
-                            if (yearEl && yearEl.textContent.trim() === '2025') {
-                                yearEl.classList.add('year-glow-start');
-                                setTimeout(function() {
-                                    yearEl.classList.remove('year-glow-start');
-                                    yearEl.classList.add('year-glow-animate');
-                                }, 400);
-                                setTimeout(function() {
-                                    yearEl.classList.remove('year-glow-animate');
-                                }, 1800);
-                            }
-                        });
-                        </script>
-                <script>
-                window.addEventListener('DOMContentLoaded', function() {
-                    var yearEl = document.getElementById('yearCal');
-                    if (yearEl && yearEl.textContent.trim() === '2025') {
-                        yearEl.style.opacity = 0;
-                        yearEl.style.transform = 'scale(0.7)';
-                        setTimeout(function() {
-                            yearEl.style.transition = 'opacity 1s, transform 1s';
-                            yearEl.style.opacity = 1;
-                            yearEl.style.transform = 'scale(1.1)';
-                        }, 300);
-                        setTimeout(function() {
-                            yearEl.style.transform = 'scale(1)';
-                        }, 1300);
-                    }
-                });
-                </script>
+        <script src="../src/scripts/calendario.js"></script>
+        <script>
+            // Trigger the CSS-based year glow animation when the year is 2025
+            window.addEventListener('DOMContentLoaded', function() {
+                var yearEl = document.getElementById('yearCal');
+                if (yearEl && yearEl.textContent.trim() === '2025') {
+                    yearEl.classList.add('year-glow-start');
+                    // Use the CSS classes already defined in StyleCalendarStudent.css
+                    setTimeout(function() {
+                        yearEl.classList.remove('year-glow-start');
+                        yearEl.classList.add('year-glow-animate');
+                    }, 400);
+                    setTimeout(function() {
+                        yearEl.classList.remove('year-glow-animate');
+                    }, 1800);
+                }
+            });
+        </script>
 </body>
 
 </html>

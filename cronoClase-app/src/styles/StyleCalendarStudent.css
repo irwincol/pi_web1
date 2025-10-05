@@ -21,7 +21,8 @@
       body { font-size: 0.9rem ; }
   .mainCalendar>*{height: 4rem;}
   .mainCalendar{gap: 0.5rem;}
-  .tittleYearCal>h1{font-size: 6rem ;}
+  /* small screens: cap large year title */
+  .tittleYearCal>h1{font-size: clamp(2rem, 8vw, 4rem);}
 
 }
 
@@ -29,7 +30,7 @@
   body { font-size: 1rem ; }
   .mainCalendar>*{height: 2rem;}
   .mainCalendar{gap: 2px;}
-  .tittleYearCal>h1{font-size: 10rem;}
+  .tittleYearCal>h1{font-size: clamp(3rem, 10vw, 8rem);} 
   
 }
 
@@ -38,7 +39,7 @@
   body { font-size: 1.5rem;  }
   .mainCalendar>*{height: 6rem;}
   .mainCalendar{gap: 1rem;}
-  .tittleYearCal>h1{font-size: 10rem;}
+  .tittleYearCal>h1{font-size: clamp(4rem, 12vw, 10rem);} 
 }
 
 /* Large devices (≥992px) */
@@ -46,7 +47,7 @@
   body { font-size: 1.2rem ;  }
   .mainCalendar>*{height: 5rem;}
   .mainCalendar{gap: 1rem;}
-  .tittleYearCal>h1{font-size: 5rem;}
+  .tittleYearCal>h1{font-size: clamp(4.5rem, 10vw, 6.5rem);} 
   .FechasImpCal h2, .FechasImpCal h3, .vacFestCal h2 {
   font-size: 1.1rem;
     font-weight: bold;
