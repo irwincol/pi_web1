@@ -6,7 +6,7 @@ let mes = document.getElementById("mes")
 let year = document.getElementById("yearCal")
 
 
-//se toma la fecha de hoy
+//se toma la fecha de hoY
 const hoy = new Date();
 const mesCal = hoy.getMonth() ; 
 const yearCal = hoy.getFullYear() ;// +1 porque enero = 0
@@ -54,6 +54,7 @@ fechaCal.forEach((diaEle, i) => {diaEle.innerHTML += `${diasSemana[i]} <br> ${st
 /***************carga de actividades en el calendario*****************/
 const lista = document.querySelectorAll("#mat1");
 const listaMat2 = document.querySelectorAll("#mat2");     
+const listaMat3 = document.querySelectorAll("#mat3");     
 
 
 //se toman las fechas del calendario y se crea un array
@@ -62,89 +63,31 @@ const fechasArray = Array.from(fechaCal)
 //se toman las fechas del calendario 
 const fechasSemana = fechasArray.map(itemFecha => itemFecha.textContent);
 
-
-
+8
 //se cargan las actividades desde la API
 
-fetch("https://68df2db0898434f41356f070.mockapi.io/tarea")
+function cargarDesde(ruta, listaTarget) {
+  fetch(`http://localhost:3001/${ruta}`)
     .then((response) => response.json())
     .then((data) => {
       data.forEach((tarea) => {
-
-        //se toman las fehcas de las tareas obtenidas desde mockoon
-        
         const fechaTexto = tarea.fecha_entrega;
         const [año, mes, dia] = fechaTexto.split("-");
         const fechaProcess = new Date(año, mes-1, dia);
-        let dayCalendarIndex = fechaProcess.getDay()-1
+        let dayCalendarIndex = fechaProcess.getDay()-1;
 
-        //se verifica que la fecha de las actividades cargadas exista en la semana
-        //que se está presentando en el calendario
-            
-        for( i of fechasSemana)  {
-
-              if(i.includes(dia)){
-
-                //si la fecha si esta en la semana, entonces se carga el nombre
-                //de la actividad en el lugar correspondiente
-                    lista[dayCalendarIndex].textContent =tarea.titulo
-                    
-              }
-        }
-           // console.log([año, mes, dia])
-      });
-    });
-
-    fetch("http://localhost:3001/mat2")
-    .then((response) => response.json())
-    .then((data) => {
-      data.forEach((tarea) => {
-
-        //se toman las fehcas de las tareas obtenidas desde mockoon
-        
-        const fechaTexto = tarea.fecha_entrega;
-        const [año, mes, dia] = fechaTexto.split("-");
-        const fechaProcess = new Date(año, mes-1, dia);
-        let dayCalendarIndex = fechaProcess.getDay()-1
-
-        //se verifica que la fehca de las actividades cargadas exista en la semana
-        //que se está presentando en el calendario
-            
-        for( i of fechasSemana)  {
-          if(i.includes(dia)){
-            // Ahora se escribe en Mat 2
-            listaMat2[dayCalendarIndex].textContent = tarea.titulo;
+        for (const i of fechasSemana) {
+          if (i.includes(dia)) {
+            listaTarget[dayCalendarIndex].textContent = tarea.titulo;
           }
         }
-           // console.log([año, mes, dia])
       });
-    });
+    })
+    .catch((err) => console.error(`Error cargando ${ruta}:`, err));
+}
 
-
-
-    fetch("http://localhost:3001/mat3")
-    .then((response) => response.json())
-    .then((data) => {
-      data.forEach((tarea) => {
-
-        //se toman las fehcas de las tareas obtenidas desde mockoon
-        
-        const fechaTexto = tarea.fecha_entrega;
-        const [año, mes, dia] = fechaTexto.split("-");
-        const fechaProcess = new Date(año, mes-1, dia);
-        let dayCalendarIndex = fechaProcess.getDay()-1
-
-        //se verifica que la fehca de las actividades cargadas exista en la semana
-        //que se está presentando en el calendario
-            
-        for( i of fechasSemana)  {
-          if(i.includes(dia)){
-            // Ahora se escribe en Mat 2
-            listaMat3[dayCalendarIndex].textContent = tarea.titulo;
-          }
-        }
-           // console.log([año, mes, dia])
-      });
-    });
+cargarDesde('tareas', lista);
+cargarDesde('mat2', listaMat2);
+cargarDesde('mat3', listaMat3);
 
 
