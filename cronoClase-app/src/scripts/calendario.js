@@ -63,7 +63,7 @@ const fechasArray = Array.from(fechaCal)
 //se toman las fechas del calendario 
 const fechasSemana = fechasArray.map(itemFecha => itemFecha.textContent);
 
-8
+
 //se cargan las actividades desde la API
 
 function cargarDesde(ruta, listaTarget) {
