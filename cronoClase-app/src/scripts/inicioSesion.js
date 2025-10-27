@@ -25,7 +25,7 @@
 
       //Verificar si se encontró un usuario con ese correo
       if (usuarios.length === 0) {
-        alert("❌ No existe una cuenta con este correo. Regístrate primero.");
+        alert(" No existe una cuenta con este correo. Regístrate primero.");
         return;
       }
 
@@ -33,7 +33,7 @@
 
       //Comparar contraseñas
       if (usuario.contrasena !== contrasena) {
-        alert("⚠️ Contraseña incorrecta");
+        alert("No existe una cuenta con este correo. Regístrate primero.");
         return;
       }
 
