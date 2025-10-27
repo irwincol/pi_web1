@@ -92,9 +92,9 @@ function cargarDesde(ruta, listaTarget) {
 //cargarDesde('mat3', listaMat3);
 
 
-//cargarDesde('http://localhost:8080/api/activity', lista);
+cargarDesde('http://localhost:8080/api/activity', lista);
 
-cargarDesde('https://68eaea3776b3362414cc7043.mockapi.io/actividad', lista);
+//cargarDesde('https://68eaea3776b3362414cc7043.mockapi.io/actividad', lista);
 
 
 
