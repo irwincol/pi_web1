@@ -83,7 +83,7 @@ const API_URL = "https://68df1237898434f41356ae93.mockapi.io/formularioRegistro"
 
       // 🔹 Redirige al login después de un breve retraso
       setTimeout(() => {
-        window.location.href = "/index.html"; 
+        window.location.href = "./index.html"; 
       }, 800);
 
     } catch (error) {
