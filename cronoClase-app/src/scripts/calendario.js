@@ -67,18 +67,18 @@ const fechasSemana = fechasArray.map(itemFecha => itemFecha.textContent);
 //se cargan las actividades desde la API
 
 function cargarDesde(ruta, listaTarget) {
-  fetch(`http://localhost:3001/${ruta}`)
+  fetch(ruta)
     .then((response) => response.json())
     .then((data) => {
       data.forEach((tarea) => {
-        const fechaTexto = tarea.fecha_entrega;
+        const fechaTexto = tarea.fechaEntrega;
         const [año, mes, dia] = fechaTexto.split("-");
         const fechaProcess = new Date(año, mes-1, dia);
         let dayCalendarIndex = fechaProcess.getDay()-1;
 
         for (const i of fechasSemana) {
           if (i.includes(dia)) {
-            listaTarget[dayCalendarIndex].textContent = tarea.titulo;
+            listaTarget[dayCalendarIndex].textContent = tarea.nombre;
           }
         }
       });
@@ -86,8 +86,15 @@ function cargarDesde(ruta, listaTarget) {
     .catch((err) => console.error(`Error cargando ${ruta}:`, err));
 }
 
-cargarDesde('tareas', lista);
-cargarDesde('mat2', listaMat2);
-cargarDesde('mat3', listaMat3);
+
+//cargarDesde('tareas', lista);
+//cargarDesde('mat2', listaMat2);
+//cargarDesde('mat3', listaMat3);
+
+
+cargarDesde('http://localhost:8080/api/activity', lista);
+
+//cargarDesde('https://68eaea3776b3362414cc7043.mockapi.io/actividad', lista);
+
 
 
